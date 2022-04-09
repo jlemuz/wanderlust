@@ -1,0 +1,52 @@
+<main>
+
+  {{!-- <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="post-url">Link</label>
+      <input id="post-url" name="post-url" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</main> --}}
+
+<form method="POST" action="/dashboard" enctype="multipart/form-data" class="login-form">
+<div class="content">
+  <h2>Upload New Image</h2>
+  <div class="input-field"> <input  type="file" name="file" /> </div>
+  <div class="input-field"> <input class="input-field" type="text" name="title" placeholder="Image Title"/> </div>
+  <div class="input-field"><input class="input-field" type="text" name="description" placeholder="Description"/></div>
+  <div>  <input type="submit" class="button-59" value="Upload"/> </div>
+      
+    </form>
+    <br>
+</div>
+
+
+ {{#if posts.length}}
+<section>
+  <h2>Your Images</h2>
+  <ul class="post-list">
+  {{#each posts}}
+  <li>
+    <article class="post">
+      <div class="title">
+      </div>
+      <div class="meta">
+  <img src="data:image/png;base64,{{image}}"/>  
+        </div>
+          <button id = {{id}} class="button-59" onclick="deleteFormHandler(event)">Delete</button>
+    </article>
+   
+
+  </li>
+  {{/each}}
+</ul>
+</section>
+{{/if}}
+</section>
+
+<script src="/javascript/delete-post.js"></script>
