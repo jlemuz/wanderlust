@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
   <title>WanderLust</title>
+  <link rel="shortcut icon" href="/public/uploads/favicon.ico" type="image/icon">
   <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
-
-<body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">WanderLust</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard">Dashboard</a>
-        <button id="logout" class="btn-no-style">Logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main>
-      {{{ body }}}
-    </main>
-    <footer>
-      Thanks for visiting!
-    </footer>
-  </div>
-  
-  {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
-</body>
-
-</html>
+</head><body>
+  <section class="hero is-primary is-medium">
+    <div class="wrapper">
+      <header>
+        <h1>
+          <a href="/">WanderLust</a>
+        </h1>
+        <nav>
+          {{#if loggedIn}}
+          <a href="/dashboard">Dashboard</a>
+          <button id="logout" class="has-background-primary">Log Out</button>
+          {{else}}
+          <a href="/login">Log In</a>
+          {{/if}}
+          <div id="navbarMenuHeroA" class="navbar-menu">
+            <div class="navbar-end">
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main class="has-background-primary-light">
+        {{{ body }}}
+      </main>
+      <footer>
+        Get Inspired
+      </footer>
+    </div>    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+  </section>
+</body></html>

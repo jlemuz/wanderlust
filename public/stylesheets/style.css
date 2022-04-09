@@ -7,9 +7,9 @@
 
 body {
   font-family: 'Rubik', sans-serif;
-  background-image: url('../bg2.jpg');
+  /* background-image: url('../bg2.jpg');
   background-attachment: fixed;
-background-size: cover;
+background-size: cover; */
 }
 
 
@@ -19,9 +19,14 @@ section{
   align-items: center;
 }
 
+nav{
+  display: flex;
+  
+}
+
 .login-form {
   background: #fff;
-  width: 500px;
+  width: 65%;
   margin: 15px auto;
   display: -webkit-box;
   display: flex;
@@ -31,6 +36,18 @@ section{
   border-radius: 4px;
   box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
   
+}
+
+#logout{
+  border: 0;
+  padding: 1%;
+  color: white;
+  font-size:medium;
+  font-weight: bold;
+  transition: background-color .1s;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 40%;
 }
 
 .card{
